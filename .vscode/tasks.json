@@ -13,6 +13,21 @@
       "enableDiscovery": "true"
     },
     {
+      "label": "PreLaunchTask for Run RisksManagmentDevSpace- with live data",
+      "type": "process",
+      "command": "basctl",
+      "args": [
+        "--command",
+        "PT.runner.generateLaunchPage"
+      ],
+      "dependsOn": [
+        "BuildMDK"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
+    },
+    {
       "label": "npm-install",
       "type": "process",
       "command": "npm",
@@ -20,7 +35,7 @@
         "install"
       ],
       "options": {
-        "cwd": "${workspaceFolder}/"
+        "cwd": "${workspaceFolder}"
       }
     },
     {
@@ -39,7 +54,7 @@
         "npm-install"
       ],
       "options": {
-        "cwd": "${workspaceFolder}/"
+        "cwd": "${workspaceFolder}"
       }
     },
     {
@@ -50,11 +65,11 @@
         "BuildMDK"
       ],
       "options": {
-        "cwd": "${workspaceFolder}/"
+        "cwd": "${workspaceFolder}"
       }
     },
     {
-      "label": "PreLaunchTask for Run RisksManagmentDevSpace- with live data",
+      "label": "PreLaunchTask for Business Partner (A2X)",
       "type": "process",
       "command": "basctl",
       "args": [
